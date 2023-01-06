@@ -1,0 +1,1263 @@
+﻿@model StartUpClub
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+@section Scripts {
+            @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+        }
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Create</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/css/custom-animation.css">
+    <link rel="stylesheet" href="~/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <link rel="stylesheet" href="~/assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/spacing.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="~/https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+       <![endif]-->
+    <!-- tp-header-area-start -->
+    <header class="d-none d-lg-block">
+        <div id="header-sticky" class="tp-header-area-two tp-header-bs-area header-space-three pt-35">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3">
+                        <div class="tp-logo text-start">
+                            <a href="~/index.html"><img src="~/assets/img/logo/logo-blue.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-xl-12 col-lg-10 tp-menu-black">
+                        <div class="tp-main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Ana Sayfa
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item align-items-center" href="#Başlık-1">Collective Idea</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown align-items-center">
+                                        <a class="nav-link dropdown-toggle align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                            Biz Kimiz?
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item align-items-center" href="#Başlık-2">Biz Kimiz?</a></li>
+                                            <li><a class="dropdown-item align-items-center" href="#Başlık-3">Değerlerimiz</a></li>
+                                            <li><a class="dropdown-item align-items-center" href="#Başlık-4">Collective SSS</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Projelerimiz
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#Başlık-5">Ortaklarımız</a></li>
+                                            <li><a class="dropdown-item" href="#Başlık-6">Projelerimiz</a></li>
+                                            <li><a class="dropdown-item" href="#Başlık-7">Mentorlerimiz</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Yarışma
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#Başlık-9">Start-Up Idea Yarışması</a></li>
+                                            <li><a class="dropdown-item" href="#Başlık-10">Başvuru</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-3 col-lg-3">
+                        <div class="tp-header-left d-flex align-items-center justify-content-end ">
+                            <ul class="d-none d-xxl-block">
+                                <li><a class="#" href="~/login.html"><i class="far fa-user fa-user"></i> Login</a></li>
+                                <li>
+                                    <a class="#" href="#">EN<i class="fal fa-arrow-down arrow-down"></i></a>
+                                    <ul>
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Arabic</a></li>
+                                        <li><a href="#">Spanish</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- tp-header-area-end -->
+
+    <div id="header-sticky-mobile" class="tp-md-header-area d-md-block d-lg-none pt-30 pb-30">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-6">
+                    <div class="tp-logo">
+                        <a href="~/index.html"><img src="~/assets/img/logo/logo-blue.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-6">
+                    <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+                        <a class="tp-btn-yellow d-none d-md-block" href="#">How it Works</a>
+                        <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="tp-offcanvas-area">
+        <div class="tpoffcanvas">
+            <div class="tpoffcanvas__logo">
+                <a href="~/index.html">
+                    <img src="~/assets/img/logo/logo-white.png" alt="">
+                </a>
+            </div>
+            <div class="tpoffcanvas__close-btn">
+                <a class="close-btn" href="~/javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
+            </div>
+            <div class="tpoffcanvas__content d-none d-sm-block">
+                <p>We deploy world-class Creative <br> on demand.</p>
+            </div>
+            <div class="mobile-menu">
+            </div>
+            <div class="tpoffcanvas__contact">
+                <span>Contact us</span>
+                <ul>
+                    <li>
+                        <i class="fas fa-star"></i> <a href="~/https://goo.gl/maps/abHegV4AoiJA6Syd8" target="_blank">
+                            Melbone
+                            st, Australia, Ny 12099
+                        </a>
+                    </li>
+                    <li><i class="fas fa-star"></i> <a href="~/tel:8180012345678">+81 800 123 456 78</a></li>
+                    <li><i class="fas fa-star"></i> <a href="~/mailto:Collaxmail@gmail.com">Collaxmail@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="tpoffcanvas__input d-none d-sm-block">
+                <p>Get UPdate</p>
+                <form class="p-relative" action="#">
+                    <input type="text" placeholder="Enter mail">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <div class="tpoffcanvas__instagram d-none d-sm-block">
+                <p>Check Instagram POst</p>
+                <div class="tp-insta">
+                    <div class="row">
+                        <div class="col-3 col-sm-3"><a href="#"><img src="~/assets/img/offcanvas/insta-1.jpg" alt=""></a></div>
+                        <div class="col-3 col-sm-3"><a href="#"><img src="~/assets/img/offcanvas/insta-2.jpg" alt=""></a></div>
+                        <div class="col-3 col-sm-3"><a href="#"><img src="~/assets/img/offcanvas/insta-4.jpg" alt=""></a></div>
+                        <div class="col-3 col-sm-3"><a href="#"><img src="~/assets/img/offcanvas/insta-4.jpg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-overlay"></div>
+
+
+
+
+    <!-- tp-hero-area-start -->
+    <main>
+        <div id="Başlık-1" class="tp-hero-area tp-hero-border p-relative">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="tp-hero-section-box-five">
+                            <div class="tp-hero-section-box-five__subtitle-wrapper d-flex justify-content-between align-items-center mb-40 wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".5s">
+                                <div class="tp-hero-section-box-five__subtitle">
+                                    <h5>Sende yarışmamıza dahil ol!</h5>
+                                </div>
+                                <div class="tp-hero-section-box-five__subtitle-link">
+                                    <a href="~/price.html">
+                                        <svg width="28" height="12" viewBox="0 0 28 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M27.5303 6.53033C27.8232 6.23744 27.8232 5.76256 27.5303 5.46967L22.7574 0.696699C22.4645 0.403806 21.9896 0.403806 21.6967 0.696699C21.4038 0.989593 21.4038 1.46447 21.6967 1.75736L25.9393 6L21.6967 10.2426C21.4038 10.5355 21.4038 11.0104 21.6967 11.3033C21.9896 11.5962 22.4645 11.5962 22.7574 11.3033L27.5303 6.53033ZM0 6.75H27V5.25H0V6.75Z"
+                                                  fill="#292930" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tp-hero-section-box-five__title pb-45">
+                                <h3 class="tp-hero-bs-title wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                                    Collective Idea 
+                                    <span class="tp-highlight">
+                                        <svg class="highlight-space" width="266" height="12" viewBox="0 0 266 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0L266 12H0V0Z" fill="#FFDC60" />
+                                        </svg>
+                                        
+                                    </span>
+                                </h3>
+                                <p class="wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">Girişim ekosistemine ilk adımınızı atabileceğiniz veya deneyiminizi ilerletebileceğiniz, kollektif yapıya sahip bir oluşum.</p>
+                            </div>
+                            <div class="tp-hero-section-box-five__input  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
+                                <form action="#">
+                                    <input type="text" placeholder="collectiveidea@gmail.com">
+                                    <button class="tp-btn-sky" type="submit">Hemen İletişime Geç!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 ">
+                        <div class="tp-hero-right-side-five p-relative pt-100">
+                            <div class="tp-yellow-space"></div> @*tp-yellow-circle-five*@
+                            <div class="tp-hero-right-side-five__img wow tpfadeRight" data-wow-duration=".9s" data-wow-delay="1.2s">
+                                <img src="~/collectiveimg/52521516-removebg-preview.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tp-hero-icon-five">
+                    <div class="tp-hero-social bp-hero-social tp-hero-social-bg-color">
+                        <a class="social-icon-1" href="#"><i class="fab fa-facebook-f social-icon-1"></i><span>Facebook</span></a>
+                        <a class="social-icon-3" href="#"><i class="fab fa-youtube social-icon-3"></i><span>youtube</span></a>
+                        <a class="social-icon-2" href="#"><i class="fab fa-twitter social-icon-2"></i><span>twitter</span></a>
+                        <a class="social-icon-2 d-md-none" href="#"><i class="fab fa-behance social-icon-2"></i><span>twitter</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- tp-hero-area-end -->
+        <!-- feature-area-start -->
+        <div id="Başlık-2" class="tp-chose-area pt-190 pb-130 p-relative">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-12">
+                        <div class="tpchosebox-main p-relative">
+                            <div class="tp-chose-bg">
+                                <img src="~/assets/img/feature/fea-2.png" alt="">
+                            </div>
+                            <div class="row gx-40 align-items-center tp-chose-space">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow tpfadeLeft" data-wow-duration=".3s" data-wow-delay=".5s">
+                                    <div class="tp-chose-item mb-40">
+                                        <div class="tpchosebox">
+                                            <div class="tpchosebox__icon mb-30">
+                                                <a href="#"><i class="flaticon-group"></i></a>
+                                            </div>
+                                            <div class="tpchosebox__content">
+                                                <h4>Network ağını genişlet</h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                    <div class="tp-chose-item">
+                                        <div class="tpchosebox tpchosebox-two mb-40 wow tpfadeIn" data-wow-duration=".5s" data-wow-delay=".7s">
+                                            <div class="tpchosebox__icon fea-color-4 mb-30">
+                                                <a href="#"><i class="flaticon-web"></i></a>
+                                            </div>
+                                            <div class="tpchosebox__content">
+                                                <h4>
+                                                    Potansiyelini keşfet
+                                                </h4>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="tpchosebox tpchosebox-three wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                                            <div class="tpchosebox__icon fea-color-5 mb-30">
+                                                <a href="#"><i class="fas fa-star"></i></a>
+                                            </div>
+                                            <div class="tpchosebox__content">
+                                                <h4>
+                                                    Ekosistemde yer edin
+                                                </h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-10 col-12 wow tpfadeRight" data-wow-duration=".5s" data-wow-delay=".9s">
+                        <div class="tp-feature-section-title-box">
+                            <h5 class="tp-subtitle pb-10">Collective Idea Nedir?</h5>
+                            <h2 class="tp-title tp-title-sm">
+                                Açık Çağrı: Girişim fikirlerini geliştiren topluluk
+                                <span class="tp-section-highlight">
+                                    
+                                    <svg width="247" height="12" viewBox="0 0 247 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M-0.000488281 0L247 12H-0.000488281V0Z" fill="#FFDC60" />
+                                    </svg>
+                                </span>
+                                
+                            </h2>
+                            <p class="pb-25">Yenilikçi ürünlere veya iş fikirlerine sahip girişimcilerin ve girişimci olmak isteyenlerin kolektif bir yapıyla kendilerini geliştirdiği network edindiği bir akademidir.</p>
+                            
+                            <div class="tp-fea-button-five">
+                                <a class="tp-btn-sky" href="~/contact.html">About Collax</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feature-area-end -->
+        <!--service-area-start -->
+        <div id="Başlık-3" class="tp-service-area tp-service-bs-space pt-130 pb-130 yellow-bg p-relative">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-10">
+                        <div class="tp-best-services-title-box">
+                            <h5 class="tp-subtitle tp-subtitle-before-color">Hizmetlerimiz</h5>
+                            <h2 class="tp-title tp-title-sm">
+                                Hayata Geçirmek İstediğiniz Projelerinize Değer Katıyoruz/ Katalım.
+                            </h2>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xl-8 col-lg-6 col-md-12 col-12">
+                        <div class="tp-sv-space-wrapper">
+                            <a href="~/service-details.html">
+                                <div class="bg-white-wrapper sv-border-top sv-border-bottom service-space">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tpservices__icon">
+                                                <i class="flaticon-target"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-6">
+                                            <div class="tpservices">
+                                                <div class="tpservices__content">
+                                                    <h5 class="tp-sv-bs-title"><br>Değer katalım</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tp-services-best-item text-end">
+                                                <div class="tpservices__icon">
+                                                    <div class="angle-right-svg">
+                                                        <div class="angle-right">
+                                                            <svg width="18" height="33" viewBox="0 0 18 33"
+                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                                      stroke-width="2" />
+                                                                <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                                      stroke-width="2" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="~/service-details.html">
+                                <div class="bg-white-wrapper sv-border-bottom service-space ">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tpservices__icon">
+                                                <i class="flaticon-statistics"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6  col-lg-6 col-6 ">
+                                            <div class="tpservices">
+                                                <div class="tpservices__content">
+                                                    <h5 class="tp-sv-bs-title">Pazarlama desteği verelim</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tp-services-best-item text-end">
+                                                <div class="tpservices__icon">
+                                                    <div class="angle-right-svg">
+                                                        <div class="angle-right">
+                                                            <svg width="18" height="33" viewBox="0 0 18 33"
+                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                                      stroke-width="2" />
+                                                                <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                                      stroke-width="2" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="~/service-details.html">
+                                <div class="bg-white-wrapper sv-border-bottom service-space">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tpservices__icon">
+                                                <i class="flaticon-coding"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-6 ">
+                                            <div class="tpservices">
+                                                <div class="tpservices__content">
+                                                    <h5 class="tp-sv-bs-title">Projenizi hayata geçirelim</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tp-services-best-item text-end">
+                                                <div class="tpservices__icon">
+                                                    <div class="angle-right-svg">
+                                                        <div class="angle-right">
+                                                            <svg width="18" height="33" viewBox="0 0 18 33"
+                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                                      stroke-width="2" />
+                                                                <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                                      stroke-width="2" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="~/service-details.html">
+                                <div class="bg-white-wrapper sv-border-bottom service-space">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tpservices__icon">
+                                                <i class="flaticon-team"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-6">
+                                            <div class="tpservices">
+                                                <div class="tpservices__content">
+                                                    <h5 class="tp-sv-bs-title">
+                                                        Mentorluk verelim
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-3">
+                                            <div class="tp-services-best-item text-end">
+                                                <div class="tpservices__icon">
+                                                    <div class="angle-right-svg">
+                                                        <div class="angle-right">
+                                                            <svg width="18" height="33" viewBox="0 0 18 33"
+                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                                      stroke-width="2" />
+                                                                <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                                      stroke-width="2" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--service-area-end -->
+        <!-- mission-area-start -->
+        <div id="Başlık-4" class="tp-mission-area pt-130 p-relative">
+            
+            <div class="container" align="center">
+                <div class="row"align="center">
+                    <div align="center">
+                        <div class="tp-mission-img" align="center">
+                            <img style="display: block; margin: auto;" src="~/collectiveimg/9.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="wow tpfadeLeft" data-wow-duration=".5s" data-wow-delay=".7s" style="padding:5%">
+                        <div class="tp-mission-tab-section">
+                            <nav>
+                                <div class="nav tp-mission-tab" id="nav-tab" role="tabpanel">
+                                    <button class="nav-links active" id="nav-Mission-tab" data-bs-toggle="tab"
+                                            data-bs-target="#Mission" type="button" role="tab" aria-controls="nav-Mission-tab"
+                                            aria-selected="true">
+                                        <span>Ne yapıyoruz?</span>
+                                    </button>
+
+                                    <button class="nav-links" id="nav-Vission-tab" data-bs-toggle="tab" data-bs-target="#Vission"
+                                            type="button" role="tab" aria-controls="nav-Vission-tab" aria-selected="true">
+                                        <span>
+                                            Kimler katılabilir?
+                                        </span>
+                                    </button>
+
+                                    <button class="nav-links" id="nav-New-tab" data-bs-toggle="tab" data-bs-target="#New"
+                                            type="button" role="tab" aria-controls="nav-New-tab" aria-selected="true">
+                                        <span>
+                                            Neden Katılmalıyım?
+                                        </span>
+                                    </button>
+
+                                    <button class="nav-links" id="nav-Value-tab" data-bs-toggle="tab" data-bs-target="#Value"
+                                            type="button" role="tab" aria-controls="nav-Value-tab" aria-selected="true">
+                                        <span>
+                                            Neden destek vermeliyim?
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade" id="Vission" role="tabpanel"
+                                 aria-labelledby="nav-Vission-tab" tabindex="0">
+                                <div class="tpmission">
+                                    <div class="tpmission__content">
+                                        <h2 class="tp-mission-title">
+                                            Kimler katılabilir?
+                                        </h2>
+                                        <font size="5">
+                                        <p class="pb-20">
+                                            <ol>
+                                                <li>1- Girişimciyseniz</li>
+                                                <li>2- Vizyonerseniz</li>
+                                                <li>3- Ekip ruhuna sahipseniz</li>
+                                                <li>4- Eleştiriye açıksanız</li>
+                                                <li>5- Gelişmek istiyorsanız</li>
+                                                <li>6- Network edinmek istiyorsanız</li>
+                                            </ol>
+                                        </p>
+                                        </font>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="tab-pane fade" id="New" role="tabpanel"
+                                 aria-labelledby="nav-New-tab" tabindex="0">
+                                <div class="tpmission">
+                                    <div class="tpmission__content">
+                                        <h2 class="tp-mission-title">
+                                            Neden Katılmalıyım?
+                                        </h2>
+                                        <font size="5">
+                                        <p class="pb-20">
+                                            <ol>
+                                                <li>1- </li>
+                                                <li>2- </li>
+                                                <li>3- </li>
+                                                <li>4- </li>
+                                                <li>5- </li>
+                                                <li>6- </li>
+                                            </ol>
+                                        </p>
+                                        </font>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade " id="Value" role="tabpanel" aria-labelledby="nav-Value-tab"
+                                 tabindex="0">
+                                <div class="tpmission">
+                                    <div class="tpmission__content">
+                                        <h2 class="tp-mission-title">
+                                            Neden Destek Vermeliyim?
+                                        </h2>
+                                        <font size="5">
+                                        <p class="pb-20"><ol>
+                                           <li>1- Gelişip büyüyebilecek start-up'lara öncelikli bir şekilde ulaşabilme imkanı</li>
+                                            <li>2- Marka değerinize katkı </li>
+                                        <li>3- Genç ve yaratıcı fikirlerle çalışma imkanı</li>
+                                        <li>4- Başarılı mentorlerin desteği</li>
+                                        <li>5- Yarışmalara doğrudan erişim imkanı</li>
+</ol>
+                                        </p>
+                                        </font>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Mission" role="tabpanel" aria-labelledby="nav-Mission-tab"
+                                 tabindex="0">
+                                <div class="tpmission">
+                                    <div class="tpmission__content">
+                                        <h2 class="tp-mission-title">
+                                            Ne yapıyoruz?
+                                        </h2>
+                                        <font size="5">
+                                        <p class="pb-20"></p>
+                                        <p>
+                                            <ul>
+                                                <li>	•Her hafta çarşamba günleri Kolektif'te 19.30'da buluşuyor </li>
+                                                <li>	•Sunumumuzu belirli bir süre içerisinde anlatıyor, soru-cevaplarla eksik yönlerinin çıkarılmasını sağlıyor</li>
+                                                <li>	•Projeleri değerlendirip, kolektif bilince sahip olunmasını, geliştirilmesine önayak oluyoruz.</li>
+                                                <li>	•Gelişim süreci takibi</li>
+                                                <li>	•Kayda alınan sunumlar, incelenip yapılan yanlışların düzeltilmesine yardımcı oluyoruz.</li>
+                                                <li>	•Sunum becerisi gelişimi</li>
+                                                <li>	•Her hafta yapılan sunum ile beraber gelişime katkı sağlanmasına olanak sağlıyoruz.</li>
+                                                <li>	•İlham olunacak fikirler</li>
+                                                <li>	•Farklı fikirler ile yeni fikirlerin çıkmasına olanak sağlıyoruz.</li>
+                                            </ul>
+                                        </p>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- mission-area-end -->
+        <!-- tp-barnd-area-start -->
+        <div id="Başlık-5" class="tp-brand-area pt-130 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tp-brand-title pb-60 d-flex align-items-center">
+                            <h4 class="tp-brand-build-title">
+                                Değişecek#16 <i class="fal fa-angle-down"></i>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tp-brand-sl">
+                    <div class="swiper-container brand-slider-active">
+                        <div class="swiper-wrapper d-flex align-items-center">
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-6.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tp-brand-icon">
+                                    <img src="~/assets/img/brand/brand-6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tp-barnd-area-end -->
+        <!-- project-area start-->
+        <div id="Başlık-6" class="tp-project-area tp-project-bs-space yellow-bg pt-130 pb-130 fix p-relative">
+            
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="tp-project-section-box text-center">
+                            <h5 class="tp-subtitle tp-subtitle-before-color">Projelerimiz</h5>
+                            <h2 class="tp-title-sm pb-65">
+                                Projelerimiz
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tp-project-slider-section">
+                        <div class="swiper-container project-slider-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="tpproject">
+                                        <div class="tpproject__content pl-20">
+                                            
+                                            <h3 class="tp-pj-title">
+                                                <a href="~/portfolio-details.html">
+                                                    Alcago
+                                                    <svg width="18" height="33"
+                                                         viewBox="0 0 18 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                              stroke-width="2" />
+                                                        <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                              stroke-width="2" />
+                                                    </svg>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="tpproject__thumb">
+                                            <div class="fix radius-20"><img class="w-100" src="~/assets/img/project/project-5.1.jpg" alt=""></div>
+                                            <div class="tpproject__thumb-icon">
+                                                <a class="popup-image" href="~/assets/img/project/project-5.1.jpg">
+                                                    <svg width="26"
+                                                         height="26" viewBox="0 0 26 26" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.3852 0.53084H7.44061V0.532315V0.53418V0.536051V0.537926V0.539806V0.541691V0.543582V0.545477V0.547378V0.549283V0.551194V0.55311V0.555031V0.556957V0.558889V0.560825V0.562767V0.564714V0.566666V0.568623V0.570585V0.572553V0.574526V0.576504V0.578488V0.580477V0.582471V0.58447V0.586475V0.588485V0.5905V0.592521V0.594547V0.596578V0.598615V0.600657V0.602704V0.604757V0.606816V0.60888V0.610949V0.613024V0.615104V0.617189V0.619281V0.621377V0.623479V0.625587V0.6277V0.629819V0.631943V0.634073V0.636209V0.63835V0.640496V0.642648V0.644806V0.64697V4.4597H14.8103C15.4175 4.4597 16.1674 4.76381 16.3875 5.5239C16.7101 6.21923 16.5128 6.91869 16.025 7.40766L16.0235 7.4091L0.654518 22.6873C0.654327 22.6875 0.654137 22.6877 0.653946 22.6879C0.621716 22.7202 0.602236 22.74 0.585537 22.7589C0.570169 22.7764 0.563459 22.7863 0.560467 22.7913C0.558094 22.7952 0.557665 22.7967 0.557318 22.798C0.556917 22.7994 0.55463 22.8078 0.55463 22.827V22.9448L0.53964 22.9749L3.04575 25.4863C3.09814 25.4944 3.17092 25.5 3.25169 25.5C3.33341 25.5 3.40695 25.4943 3.45946 25.486L19.1312 10.1493C19.2831 9.99744 19.4547 9.86374 19.6637 9.77066C19.8759 9.67615 20.1007 9.63497 20.3436 9.63497L20.35 9.63497C20.4113 9.63494 20.5382 9.63487 20.672 9.65721C20.7704 9.67365 20.9236 9.70976 21.0678 9.80558C21.7858 10.0467 22.0732 10.7758 22.0732 11.3672V18.7536H25.5V0.607256L25.4232 0.530238C25.4107 0.530639 25.398 0.53084 25.3852 0.53084ZM0.47172 22.8716L0.471825 22.8718L0.47172 22.8716ZM3.38948 25.5544L3.39381 25.5502L3.38951 25.5545L3.38948 25.5544Z"
+                                                              stroke="#292930" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="tpproject">
+                                        <div class="tpproject__content pl-20">
+                                            
+                                            <h3 class="tp-pj-title">
+                                                <a href="~/portfolio-details.html">
+                                                    3D Donate
+                                                    <svg width="18" height="33"
+                                                         viewBox="0 0 18 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                              stroke-width="2" />
+                                                        <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                              stroke-width="2" />
+                                                    </svg>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="tpproject__thumb">
+                                            <div class="fix radius-20"> <img class="w-100" src="~/assets/img/project/project-5.2.jpg" alt=""></div>
+                                            <div class="tpproject__thumb-icon">
+                                                <a class="popup-image" href="~/~/assets/img/project/project-5.2.jpg">
+                                                    <svg width="26"
+                                                         height="26" viewBox="0 0 26 26" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.3852 0.53084H7.44061V0.532315V0.53418V0.536051V0.537926V0.539806V0.541691V0.543582V0.545477V0.547378V0.549283V0.551194V0.55311V0.555031V0.556957V0.558889V0.560825V0.562767V0.564714V0.566666V0.568623V0.570585V0.572553V0.574526V0.576504V0.578488V0.580477V0.582471V0.58447V0.586475V0.588485V0.5905V0.592521V0.594547V0.596578V0.598615V0.600657V0.602704V0.604757V0.606816V0.60888V0.610949V0.613024V0.615104V0.617189V0.619281V0.621377V0.623479V0.625587V0.6277V0.629819V0.631943V0.634073V0.636209V0.63835V0.640496V0.642648V0.644806V0.64697V4.4597H14.8103C15.4175 4.4597 16.1674 4.76381 16.3875 5.5239C16.7101 6.21923 16.5128 6.91869 16.025 7.40766L16.0235 7.4091L0.654518 22.6873C0.654327 22.6875 0.654137 22.6877 0.653946 22.6879C0.621716 22.7202 0.602236 22.74 0.585537 22.7589C0.570169 22.7764 0.563459 22.7863 0.560467 22.7913C0.558094 22.7952 0.557665 22.7967 0.557318 22.798C0.556917 22.7994 0.55463 22.8078 0.55463 22.827V22.9448L0.53964 22.9749L3.04575 25.4863C3.09814 25.4944 3.17092 25.5 3.25169 25.5C3.33341 25.5 3.40695 25.4943 3.45946 25.486L19.1312 10.1493C19.2831 9.99744 19.4547 9.86374 19.6637 9.77066C19.8759 9.67615 20.1007 9.63497 20.3436 9.63497L20.35 9.63497C20.4113 9.63494 20.5382 9.63487 20.672 9.65721C20.7704 9.67365 20.9236 9.70976 21.0678 9.80558C21.7858 10.0467 22.0732 10.7758 22.0732 11.3672V18.7536H25.5V0.607256L25.4232 0.530238C25.4107 0.530639 25.398 0.53084 25.3852 0.53084ZM0.47172 22.8716L0.471825 22.8718L0.47172 22.8716ZM3.38948 25.5544L3.39381 25.5502L3.38951 25.5545L3.38948 25.5544Z"
+                                                              stroke="#292930" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="tpproject">
+                                        <div class="tpproject__content pl-20">
+                                            
+                                            <h3 class="tp-pj-title">
+                                                <a href="~/portfolio-details.html">
+                                                    Lighting Collective
+                                                    <svg width="18" height="33"
+                                                         viewBox="0 0 18 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                              stroke-width="2" />
+                                                        <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                              stroke-width="2" />
+                                                    </svg>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="tpproject__thumb">
+                                            <div class="fix radius-20"><img class="w-100" src="~/assets/img/project/project-5.3.jpg" alt=""></div>
+                                            <div class="tpproject__thumb-icon">
+                                                <a class="popup-image" href="~/assets/img/project/project-5.3.jpg">
+                                                    <svg width="26"
+                                                         height="26" viewBox="0 0 26 26" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.3852 0.53084H7.44061V0.532315V0.53418V0.536051V0.537926V0.539806V0.541691V0.543582V0.545477V0.547378V0.549283V0.551194V0.55311V0.555031V0.556957V0.558889V0.560825V0.562767V0.564714V0.566666V0.568623V0.570585V0.572553V0.574526V0.576504V0.578488V0.580477V0.582471V0.58447V0.586475V0.588485V0.5905V0.592521V0.594547V0.596578V0.598615V0.600657V0.602704V0.604757V0.606816V0.60888V0.610949V0.613024V0.615104V0.617189V0.619281V0.621377V0.623479V0.625587V0.6277V0.629819V0.631943V0.634073V0.636209V0.63835V0.640496V0.642648V0.644806V0.64697V4.4597H14.8103C15.4175 4.4597 16.1674 4.76381 16.3875 5.5239C16.7101 6.21923 16.5128 6.91869 16.025 7.40766L16.0235 7.4091L0.654518 22.6873C0.654327 22.6875 0.654137 22.6877 0.653946 22.6879C0.621716 22.7202 0.602236 22.74 0.585537 22.7589C0.570169 22.7764 0.563459 22.7863 0.560467 22.7913C0.558094 22.7952 0.557665 22.7967 0.557318 22.798C0.556917 22.7994 0.55463 22.8078 0.55463 22.827V22.9448L0.53964 22.9749L3.04575 25.4863C3.09814 25.4944 3.17092 25.5 3.25169 25.5C3.33341 25.5 3.40695 25.4943 3.45946 25.486L19.1312 10.1493C19.2831 9.99744 19.4547 9.86374 19.6637 9.77066C19.8759 9.67615 20.1007 9.63497 20.3436 9.63497L20.35 9.63497C20.4113 9.63494 20.5382 9.63487 20.672 9.65721C20.7704 9.67365 20.9236 9.70976 21.0678 9.80558C21.7858 10.0467 22.0732 10.7758 22.0732 11.3672V18.7536H25.5V0.607256L25.4232 0.530238C25.4107 0.530639 25.398 0.53084 25.3852 0.53084ZM0.47172 22.8716L0.471825 22.8718L0.47172 22.8716ZM3.38948 25.5544L3.39381 25.5502L3.38951 25.5545L3.38948 25.5544Z"
+                                                              stroke="#292930" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="tpproject">
+                                        <div class="tpproject__content pl-20">
+                                            
+                                            <h3 class="tp-pj-title">
+                                                <a href="~/portfolio-details.html">
+                                                    Collective Talks
+                                                    <svg width="18" height="33"
+                                                         viewBox="0 0 18 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <line x1="0.707107" y1="1.18181" x2="16.7071" y2="17.1818" stroke="black"
+                                                              stroke-width="2" />
+                                                        <line x1="1.07121" y1="31.4041" x2="15.2934" y2="17.1819" stroke="black"
+                                                              stroke-width="2" />
+                                                    </svg>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="tpproject__thumb">
+                                            <div class="fix radius-20"><img class="w-100" src="~/assets/img/project/project-5.2.jpg" alt=""></div>
+                                            <div class="tpproject__thumb-icon">
+                                                <a class="popup-image" href="~/collectiveimg/6.jpg">
+                                                    <svg width="26"
+                                                         height="26" viewBox="0 0 26 26" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.3852 0.53084H7.44061V0.532315V0.53418V0.536051V0.537926V0.539806V0.541691V0.543582V0.545477V0.547378V0.549283V0.551194V0.55311V0.555031V0.556957V0.558889V0.560825V0.562767V0.564714V0.566666V0.568623V0.570585V0.572553V0.574526V0.576504V0.578488V0.580477V0.582471V0.58447V0.586475V0.588485V0.5905V0.592521V0.594547V0.596578V0.598615V0.600657V0.602704V0.604757V0.606816V0.60888V0.610949V0.613024V0.615104V0.617189V0.619281V0.621377V0.623479V0.625587V0.6277V0.629819V0.631943V0.634073V0.636209V0.63835V0.640496V0.642648V0.644806V0.64697V4.4597H14.8103C15.4175 4.4597 16.1674 4.76381 16.3875 5.5239C16.7101 6.21923 16.5128 6.91869 16.025 7.40766L16.0235 7.4091L0.654518 22.6873C0.654327 22.6875 0.654137 22.6877 0.653946 22.6879C0.621716 22.7202 0.602236 22.74 0.585537 22.7589C0.570169 22.7764 0.563459 22.7863 0.560467 22.7913C0.558094 22.7952 0.557665 22.7967 0.557318 22.798C0.556917 22.7994 0.55463 22.8078 0.55463 22.827V22.9448L0.53964 22.9749L3.04575 25.4863C3.09814 25.4944 3.17092 25.5 3.25169 25.5C3.33341 25.5 3.40695 25.4943 3.45946 25.486L19.1312 10.1493C19.2831 9.99744 19.4547 9.86374 19.6637 9.77066C19.8759 9.67615 20.1007 9.63497 20.3436 9.63497L20.35 9.63497C20.4113 9.63494 20.5382 9.63487 20.672 9.65721C20.7704 9.67365 20.9236 9.70976 21.0678 9.80558C21.7858 10.0467 22.0732 10.7758 22.0732 11.3672V18.7536H25.5V0.607256L25.4232 0.530238C25.4107 0.530639 25.398 0.53084 25.3852 0.53084ZM0.47172 22.8716L0.471825 22.8718L0.47172 22.8716ZM3.38948 25.5544L3.39381 25.5502L3.38951 25.5545L3.38948 25.5544Z"
+                                                              stroke="#292930" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-dots text-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- project-area-end -->
+        <!-- team-area-start-here -->
+        <div id="Başlık-7" class="tp-team-area pt-130 p-relative">
+            
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="tp-project-section-box text-center">
+                            <h5 class="tp-subtitle">Mentorlarımız</h5>
+                            <h2 class="tp-title-sm pb-60">
+                                Mentorlarımız ile Tanış
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-6  wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".5s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img src="~/collectiveimg/Yeşil_Modern_Sektör_Sohbetleri_Etkinlik_Online_Duyuru_İnstagram_Gönderisi__1_-removebg-preview.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Değişecek#21</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">UI/UX Designer</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img class="w-5" src="~/collectiveimg/aykut.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Darrell Steward</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">Değişecek#22</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" />" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img class="w-5" src="~/collectiveimg/52521516-removebg-preview.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Floyd Miles</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">Değişecek#24</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow tpfadeUp" data-wow-duration="1.4s" data-wow-delay="1.6s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img class="w-5" src="~/collectiveimg/ismail.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Robert Fox</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">Değişecek#25</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow tpfadeUp" data-wow-duration="1.4s" data-wow-delay="1.6s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img class="w-5" src="~/collectiveimg/ismail.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Robert Fox</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">Değişecek#25</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow tpfadeUp" data-wow-duration="1.4s" data-wow-delay="1.6s">
+                        <div class="tpteam mb-30">
+                            <div class="tpteam__shape-1">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__shape-2">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="tpteam__thumb">
+                                <img class="w-5" src="~/collectiveimg/alihan-removebg-preview.png" alt="">
+                            </div>
+                            <div class="tpteam__content">
+                                <h4 class="tp-team-sm-title"><a href="~/about-me.html">Robert Fox</a></h4>
+                                <h5 class="tp-team-sm-subtitle"><a href="#">Değişecek#25</a></h5>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="Başlık-9" class="tp-blog-area tp-blog-bs-space yellow-bg pt-130 pb-130 mr-130 ml-130 grey-bg p-relative">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-12">
+                        <div class="tp-blog-section-box pb-35">
+                            <h5 class="tp-subtitle tp-subtitle-before-color">Yarışma Hakkında</h5>
+                            <h2 class="tp-title-sm">
+                                Start-Up Idea Yarışması
+                            </h2>
+                        </div>
+                        <div>
+                            <p>
+                                Startup Idea yarışması aslında bir yarışmadan ziyade girişimlere, girişimcilere  destek amacıyla yapılan, 
+                                projelerin profesyonellerce değerlendirildiği, gelişimi izlendiği ve en kısa sürede en yüksek verimde monotize 
+                                edildiği 48 saatlik bir yarışma programıdır. Bu program içerisinde başlangıç aşamasındaki projeler ele alınıp 
+                                değerlendirilecek ve gelişimi için mentorluk dahilinde ilerleme kaydedilir.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 tp-contact-space col-12 ">
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container" href="#Başlık-10" ><a class="tp-btn-sky-similar vertical-center" href="#Başlık-10" >Başvur</a></div>
+            
+        </div>
+        <!-- blog-area-end -->
+
+
+
+        
+    </main>
+
+
+    <h1 id="Başlık-10" class="col-4 offset-4"><font>< <br /> <br /><br />Startup Idea’ya başvuru formu </font></h1>
+
+        <div class="row">
+            <div class="col-4 offset-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-3">
+                        <label asp-for="ProjectName" class="control-label">Projenin İsmi:</label>
+                        <input asp-for="ProjectName" class="form-control" />
+                        <span asp-validation-for="ProjectName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="InvestorSummary" class="control-label">Projenin Kısa Yatırımcı Özeti:</label>
+                        <input asp-for="InvestorSummary" class="form-control" />
+                        <span asp-validation-for="InvestorSummary" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="ASourceOfInspiration" class="control-label">İlham Kaynağı:</label>
+                        <input asp-for="ASourceOfInspiration" class="form-control" />
+                        <span asp-validation-for="ASourceOfInspiration" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="MarketOpportunity" class="control-label">Pazar Fırsatı:</label>
+                        <input asp-for="MarketOpportunity" class="form-control" />
+                        <span asp-validation-for="MarketOpportunity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="YourCompetitors" class="control-label">Rakipleriniz:</label>
+                        <input asp-for="YourCompetitors" class="form-control" />
+                        <span asp-validation-for="YourCompetitors" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="CurrentPhaseOfTheProject" class="control-label">Projenin Güncel Aşaması:</label>
+                        <input asp-for="CurrentPhaseOfTheProject" class="form-control" />
+                        <span asp-validation-for="CurrentPhaseOfTheProject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="PatentTrademarkApplicationDetailsOfTheProject" class="control-label">Projenin Patent - Marka Başvuru Detayları:</label>
+                        <input asp-for="PatentTrademarkApplicationDetailsOfTheProject" class="form-control" />
+                        <span asp-validation-for="PatentTrademarkApplicationDetailsOfTheProject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="YourGrowthStrategies" class="control-label">Büyüme Stratejileriniz:</label>
+                        <input asp-for="YourGrowthStrategies" class="form-control" />
+                        <span asp-validation-for="YourGrowthStrategies" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="ApplicationType" class="control-label">Başvuru Türü:</label>
+                        <input asp-for="ApplicationType" class="form-control" />
+                        <span asp-validation-for="ApplicationType" class="text-danger">*'Bireysel' ya da 'Grup' olarak cevaplayınız.*</span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label">İsminiz:</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Surname" class="control-label">Soyisminiz:</label>
+                        <input asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Email" class="control-label">E-mailiniz:</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="TelNo" class="control-label">Telefon numaranız:</label>
+                        <input asp-for="TelNo" class="form-control" />
+                        <span asp-validation-for="TelNo" class="text-danger">*53403099XX şeklinde sıfırsız başlamalı. Zorunludur.*</span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="EducationStatus" class="control-label">Öğrenim Durumu:</label>
+                        <input asp-for="EducationStatus" class="form-control" />
+                        <span asp-validation-for="EducationStatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="City" class="control-label">Şehir:</label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Address" class="control-label">Adresiniz:</label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- footer-area-start -->
+
+    
+    <footer>
+        <div class="tp-footer-area pt-130 pb-30 p-relative">
+            
+            <div class="container">
+                <div class="row wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".5s">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="tp-footer-widget">
+                            <div class="tp-footer-widget__logo mb-30">
+                                <a href="~/index.html"><img src="~/assets/img/logo/logo-blue.png" alt=""></a>
+                            </div>
+                            <div class="tp-footer-widget__text mb-30">
+                                <p>
+                                    A new way to make the payments easy,
+                                    reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
+                                </p>
+                            </div>
+                            <div class="tp-footer-widget__social-link tp-footer-widget__social-link-2 ">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 col-md-6 d-flex justify-content-lg-center">
+                        <div class="tp-footer-widget">
+                            <div class="tp-footer-widget__title pb-15">
+                                <h3 class="footer-title text-black">Usefull Links</h3>
+                            </div>
+                            <div class="tp-footer-widget__list">
+                                <ul>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">How it Works</a></li>
+                                    <li><a href="#">Create</a></li>
+                                    
+                                    <li><a href="#">Proje geliştirme akademisi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 col-md-6">
+                        <div class="tp-footer-widget pl-20">
+                            <div class="tp-footer-widget__title pb-15">
+                                <h3 class="footer-title text-black">Community</h3>
+                            </div>
+                            <div class="tp-footer-widget__list">
+                                <ul>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Suggestions</a></li>
+                                    <li><a href="~/blog.html">Blog</a></li>
+                                    <li><a href="#">Newsletters</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="tp-footer-widget">
+                            <div class="tp-footer-widget__title pb-15">
+                                <h3 class="footer-title text-black">Subscribe Newslatter</h3>
+                            </div>
+                            <div class="tp-footer-widget__text mb-55">
+                                <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo</p>
+                            </div>
+                            <div class="tp-footer-widget__input tp-input-white">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter Mail">
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tp-copyright-area wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                <div class="container">
+                    <div class="copyright-border pt-40">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-12">
+                                <div class="tp-copyright-left text-lg-start text-start text-md-center">
+                                    <p class="text-black"> © Copyright ©2022 Collax. All Rights Reserved</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-12">
+                                <div class="tp-copyright-right tp-copyright-color text-start text-md-center text-lg-end">
+                                    <a href="#">Terms and conditions</a>
+                                    <a href="#"> Privacy policy</a>
+                                    <a href="#">Login / Signup</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer-area-end -->
+
+
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="far fa-angle-double-up"></i>
+    </button>
+
+
+    <!-- JS here -->
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/js/waypoints.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/swiper-bundle.js"></script>
+    <script src="~/assets/js/slick.js"></script>
+    <script src="~/assets/js/magnific-popup.js"></script>
+    <script src="~/assets/js/counterup.js"></script>
+    <script src="~/assets/js/wow.js"></script>
+    <script src="~/assets/js/meanmenu.js"></script>
+    <script src="~/assets/js/isotope-pkgd.js"></script>
+    <script src="~/assets/js/imagesloaded-pkgd.js"></script>
+    <script src="~/assets/js/ajax-form.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+
+</html>
